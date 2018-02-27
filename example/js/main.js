@@ -45,7 +45,7 @@ const start = async () => {
     const drawRandom = () => {
         for (let vY = 0; vY < height; vY++) {
             for (let vX = 0; vX < width; vX++) {
-                const ch = String.fromCharCode(utils_1.randInt(256));
+                const ch = utils_1.randInt(256);
                 const fore = utils_1.randInt(16);
                 const back = utils_1.randInt(16);
                 canvasConsole.putChar(ch, vX, vY, fore, back);

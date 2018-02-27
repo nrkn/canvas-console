@@ -24,7 +24,7 @@ CanvasConsole( container )
   const drawRandom = () => {
     for( let vY = 0; vY < height; vY++ ){
       for( let vX = 0; vX < width; vX++ ){
-        const ch = String.fromCharCode( randInt( 256 ) )
+        const ch = randInt( 256 )
         const fore = randInt( 16 )
         const back = randInt( 16 )
 
@@ -90,7 +90,7 @@ an index into the palette, or an RGBA tuple array, eg `[ 0, 127, 255, 255 ]`
 ## Options
 
 ```typescript
-export interface Options {
+interface Options {
   spriteSize?: Size,
   viewSize?: Size,
   palette?: Palette,

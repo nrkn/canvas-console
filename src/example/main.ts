@@ -15,7 +15,7 @@ const start = async () => {
   const drawRandom = () => {
     for( let vY = 0; vY < height; vY++ ){
       for( let vX = 0; vX < width; vX++ ){
-        const ch = String.fromCharCode( randInt( 256 ) )
+        const ch = randInt( 256 )
         const fore = randInt( 16 )
         const back = randInt( 16 )
 
