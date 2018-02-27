@@ -1,0 +1,17 @@
+{
+  "name": "canvas-console",
+  "version": "0.1.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "build-example": "tsc && browserify ./dist/example/main.js -o ./example/js/main.js"
+  },
+  "keywords": [],
+  "author": "Nik Coughlin <nrkn.com@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^16.1.0",
+    "typescript": "^2.7.2"
+  }
+}
