@@ -1,12 +1,20 @@
 {
   "name": "canvas-console",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Console/terminal style drawing to an HTML canvas",
   "main": "./dist/index.js",
   "scripts": {
     "build": "tsc",
     "build-example": "tsc && browserify ./dist/example/main.js -o ./example/js/main.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nrkn/canvas-console.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nrkn/canvas-console/issues"
+  },
+  "homepage": "https://github.com/nrkn/canvas-console#readme",
   "author": "Nik Coughlin <nrkn.com@gmail.com>",
   "license": "MIT",
   "devDependencies": {
