@@ -21,7 +21,7 @@ const displayCanvasStyle = {
   margin: 'auto'
 }
 
-const CanvasConsole = async ( container: Element, options?: Options ) =>{
+const CanvasConsole = async ( container: Element, options?: Options ) => {
   const settings = Object.assign( defaultOptions, options )
 
   const {
@@ -67,9 +67,10 @@ const CanvasConsole = async ( container: Element, options?: Options ) =>{
     scaledBuffer = c.createImageData( scaledSize.width, scaledSize.height )
   }
 
-  const putChar = ( ch: string, column: number, row: number, fore: RgbaTuple | number = 7, back: RgbaTuple | number = 0 ) => {
+  const putChar = ( ch: string | number, column: number, row: number, fore: RgbaTuple | number = 7, back: RgbaTuple | number = 0 ) => {
     const { width, height } = spriteSize
-    const sprite = sprites[ ch.charCodeAt( 0 ) ]
+    const spriteIndex = isNumber( ch ) ? ch : ch.charCodeAt( 0 )
+    const sprite = sprites[ spriteIndex ]
     const x = column * width
     const y = row * height
 

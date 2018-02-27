@@ -42,7 +42,8 @@ const CanvasConsole = async (container, options) => {
     };
     const putChar = (ch, column, row, fore = 7, back = 0) => {
         const { width, height } = spriteSize;
-        const sprite = sprites[ch.charCodeAt(0)];
+        const spriteIndex = predicates_1.isNumber(ch) ? ch : ch.charCodeAt(0);
+        const sprite = sprites[spriteIndex];
         const x = column * width;
         const y = row * height;
         fore = predicates_1.isNumber(fore) ? palette[fore] : fore;
