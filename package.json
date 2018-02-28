@@ -1,8 +1,9 @@
 {
   "name": "canvas-console",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Console/terminal style drawing to an HTML canvas",
   "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "build-example": "tsc && browserify ./dist/example/main.js -o ./example/js/main.js"
