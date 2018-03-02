@@ -54,11 +54,12 @@ const CanvasConsole = async (container, options) => {
     window.addEventListener('resize', onResize);
     onResize();
     blit();
-    return {
+    const api = {
         putChar,
         get width() { return viewSize.width; },
         get height() { return viewSize.height; }
     };
+    return api;
 };
 module.exports = CanvasConsole;
 //# sourceMappingURL=index.js.map

@@ -12,10 +12,10 @@ exports.getColor = (image, x, y) => {
 };
 exports.putColor = (image, color, x, y) => {
     const i = exports.getIndex(image, x, y);
-    image.data[i] = color[0];
-    image.data[i + 1] = color[1];
-    image.data[i + 2] = color[2];
-    image.data[i + 3] = color[3];
+    image.data[i] = color[color_1.R];
+    image.data[i + 1] = color[color_1.G];
+    image.data[i + 2] = color[color_1.B];
+    image.data[i + 3] = color[color_1.A];
 };
 exports.nearestNeighbourCopy = (source, target) => {
     const fX = source.width / target.width;

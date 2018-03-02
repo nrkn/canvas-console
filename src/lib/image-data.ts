@@ -1,4 +1,4 @@
-import { RgbaTuple, ColorMapper, recolorTwoBit } from './color'
+import { RgbaTuple, ColorMapper, recolorTwoBit, R, G, B, A } from './color'
 
 export const getIndex = ( image: ImageData, x: number, y: number ) =>
   ( y * image.width + x ) * 4
@@ -17,10 +17,10 @@ export const getColor = ( image: ImageData, x: number, y: number ) : RgbaTuple =
 export const putColor = ( image: ImageData, color: RgbaTuple, x: number, y: number ) => {
   const i = getIndex( image, x, y )
 
-  image.data[ i ] = color[ 0 ]
-  image.data[ i + 1 ] = color[ 1 ]
-  image.data[ i + 2 ] = color[ 2 ]
-  image.data[ i + 3 ] = color[ 3 ]
+  image.data[ i ] = color[ R ]
+  image.data[ i + 1 ] = color[ G ]
+  image.data[ i + 2 ] = color[ B ]
+  image.data[ i + 3 ] = color[ A ]
 }
 
 export const nearestNeighbourCopy = ( source: ImageData, target: ImageData ) => {

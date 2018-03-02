@@ -11,6 +11,7 @@ import { loadSprites } from './lib/image'
 import { nearestNeighbourCopy, drawColored } from './lib/image-data'
 import { RgbaTuple } from './lib/color'
 import { isNumber } from './lib/predicates'
+import { CanvasConsoleApi } from './types'
 
 const defaultOptions: Settings = {
   spriteSize, viewSize, palette, spriteSource, useCleanScaling
@@ -87,11 +88,13 @@ const CanvasConsole = async ( container: Element, options?: Options ) => {
   onResize()
   blit()
 
-  return {
+  const api: CanvasConsoleApi = {
     putChar,
     get width(){ return viewSize.width },
     get height(){ return viewSize.height }
   }
+
+  return api
 }
 
 export = CanvasConsole

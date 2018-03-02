@@ -1,6 +1,6 @@
 {
   "name": "canvas-console",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Console/terminal style drawing to an HTML canvas",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

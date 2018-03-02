@@ -114,17 +114,22 @@ const CanvasConsole = async (container, options) => {
     window.addEventListener('resize', onResize);
     onResize();
     blit();
-    return {
+    const api = {
         putChar,
         get width() { return viewSize.width; },
         get height() { return viewSize.height; }
     };
+    return api;
 };
 module.exports = CanvasConsole;
 
 },{"./default-options":1,"./lib/geometry":5,"./lib/image":7,"./lib/image-data":6,"./lib/predicates":8}],4:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.R = 0;
+exports.G = 1;
+exports.B = 2;
+exports.A = 3;
 /*
   Only checks the red channel of sourceColor, assumes background if 0 or
   foreground if anything else.
@@ -167,10 +172,10 @@ exports.getColor = (image, x, y) => {
 };
 exports.putColor = (image, color, x, y) => {
     const i = exports.getIndex(image, x, y);
-    image.data[i] = color[0];
-    image.data[i + 1] = color[1];
-    image.data[i + 2] = color[2];
-    image.data[i + 3] = color[3];
+    image.data[i] = color[color_1.R];
+    image.data[i + 1] = color[color_1.G];
+    image.data[i + 2] = color[color_1.B];
+    image.data[i + 3] = color[color_1.A];
 };
 exports.nearestNeighbourCopy = (source, target) => {
     const fX = source.width / target.width;
